@@ -28,6 +28,7 @@ public class StabilityAIClient {
        // headers.setContentType(MediaType.APPLICATION_JSON);
 
         //HttpEntity<String> entity = new HttpEntity<>(requestBody, headers);
+
         HttpEntity<String> entity = new HttpEntity<>(requestBody);
         ResponseEntity<TextToImageResponse> response = restTemplate.postForEntity(apiUrl, entity, TextToImageResponse.class);
 
